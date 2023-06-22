@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components/native";
 import { Text, StyleSheet, Image } from "react-native";
+import { images } from "./images";
+import IconButton from "./components/IconButton";
 
 const Container = styled.SafeAreaView`
   flex: 1;
@@ -40,6 +42,7 @@ const App = () => {
       <SubTitle>오늘은 이 음악 어떤가요?</SubTitle>
       <TitleImg source={require("../assets/images/iam_album_img.jpg")} />
       <SubTitle>최근 들은 노래</SubTitle>
+      <IconButton type={images.unlike} />
     </Container>
   );
 };

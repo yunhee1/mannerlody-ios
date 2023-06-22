@@ -5,9 +5,11 @@ const colors = {
   grey_1: "#a6a6a6",
   red: "#e84118",
   blue: "#3679fe",
+  purple: "#6635FA",
 };
 
 export const theme = {
   background: colors.white,
   text: colors.black,
+  main: colors.purple,
 };

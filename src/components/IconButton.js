@@ -1,16 +1,28 @@
 import React from "react";
 import { TouchableOpacity } from "react-native";
-import styled from "styled-component/native";
+import styled from "styled-components/native";
 import PropTypes from "prop-types";
-import { image } from "react-native";
-import { Touchable } from "react-native";
+import { images } from "../images";
 
 const Icon = styled.Image`
-  width: 30px;
-  height: 30px;
+  tint-color: ${({ theme }) => theme.main};
+  width: 25px;
+  height: 25px;
   margin: 10px;
+  object-fit: contain;
 `;
 
 const IconButton = ({ type, onPressOut }) => {
-  return <TouchableOpacity onPressOut={onPressOut}></TouchableOpacity>;
+  return (
+    <TouchableOpacity onPressOut={onPressOut}>
+      <Icon source={type} />
+    </TouchableOpacity>
+  );
 };
+
+IconButton.PropTypes = {
+  type: PropTypes.oneOf(Object.values(images)).isRequired,
+  onPressOut: PropTypes.func,
+};
+
+export default IconButton;
