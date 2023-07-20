@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components/native";
 import { TouchableOpacity } from "react-native";
 import { images } from "./images";
 import IconButton from "./components/IconButton";
+import SoundManager from "./components/SoundManager";
 
 const Container = styled.SafeAreaView`
   flex: 1;
@@ -109,6 +110,10 @@ const Tab = styled.Image`
 `;
 
 const App = () => {
+  useEffect(() => {
+    SoundManager.loadSound(require("../assets/songs/baemin_song.mp3"));
+  }, []);
+
   return (
     <>
       <Container>
