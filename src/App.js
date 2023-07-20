@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import { Text, StyleSheet, Image } from "react-native";
+import { TouchableOpacity } from "react-native";
 import { images } from "./images";
 import IconButton from "./components/IconButton";
 
@@ -18,8 +18,8 @@ const Title = styled.Text`
   font-weight: 700;
 `;
 
-const TitlesongContainer = styled.View`
-  width: 90%;
+const TitlesongContainer = styled.TouchableOpacity`
+  width: 93%;
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -67,7 +67,7 @@ const SubTitle = styled.Text`
 //   width: 90%;
 // `;
 const MainsongsList = styled.Image`
-  width: 90%;
+  width: 93%;
   height: 230px;
   margin-top: 0px;
   margin-bottom: 20px;
@@ -84,9 +84,10 @@ const Explanation = styled.Text`
   font-size: 16px;
 `;
 
-const ExplanationContainer = styled.View`
-  width: 90%;
+const ExplanationContainer = styled.TouchableOpacity`
+  width: 93%;
   border-radius: 5px;
+  margin-top: 10px;
   padding: 20px;
   background-color: #f5f5f5;
   flex-direction: row;
@@ -98,33 +99,45 @@ const ExplanationImg = styled.Image`
   object-fit: cover;
 `;
 
+const Tab = styled.Image`
+  width: 100%;
+  height: 90px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  align-self: flex-end;
+`;
+
 const App = () => {
   return (
-    <Container>
-      <Title>매너모드로 느끼는 멜로디{"\n"}매너로디입니다</Title>
-      <SubTitle>오늘은 이 음악 어떤가요?</SubTitle>
-      <TitlesongContainer>
-        <TitleImg source={require("../assets/images/iam_album_img.jpg")} />
-        <SoneInfoContainer>
-          <Type>경쾌한</Type>
-          <SongTitle>IAM</SongTitle>
-          <SongComposer>김윤희 작사 / 김윤희 작곡</SongComposer>
-        </SoneInfoContainer>
-      </TitlesongContainer>
-      <SubTitle>최근 들은 노래</SubTitle>
-      {/* <MainsongsListContainer> */}
-      <MainsongsList source={require("../assets/images/main_img.png")} />
-      {/* </MainsongsListContainer> */}
+    <>
+      <Container>
+        <Title>매너모드로 느끼는 멜로디{"\n"}매너로디입니다</Title>
+        <SubTitle>오늘은 이 음악 어떤가요?</SubTitle>
+        <TitlesongContainer>
+          <TitleImg source={require("../assets/images/iam_album_img.jpg")} />
+          <SoneInfoContainer>
+            <Type>경쾌한</Type>
+            <SongTitle>IAM</SongTitle>
+            <SongComposer>김윤희 작사 / 김윤희 작곡</SongComposer>
+          </SoneInfoContainer>
+        </TitlesongContainer>
+        <SubTitle>최근 들은 노래</SubTitle>
+        {/* <MainsongsListContainer> */}
+        <MainsongsList source={require("../assets/images/main_img.png")} />
+        {/* </MainsongsListContainer> */}
 
-      {/* <IconButton type={images.unlike} /> */}
-      <ExplanationContainer>
-        <ExplanationImg source={require("../assets/images/expla_img.png")} />
-        <Explanation>
-          음의 높낮이에 따라 음악을 느낄 수 있는 {"\n"}매너로디의 5가지의 진동을
-          체험해보세요
-        </Explanation>
-      </ExplanationContainer>
-    </Container>
+        {/* <IconButton type={images.unlike} /> */}
+        <ExplanationContainer>
+          <ExplanationImg source={require("../assets/images/expla_img.png")} />
+          <Explanation>
+            음의 높낮이에 따라 음악을 느낄 수 있는 {"\n"}매너로디의 5가지의
+            진동을 체험해보세요
+          </Explanation>
+        </ExplanationContainer>
+      </Container>
+      <Tab source={require("../assets/images/tab_bar.png")} />
+    </>
   );
 };
 
