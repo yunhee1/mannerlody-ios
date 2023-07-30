@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+/*import React, { useEffect } from "react";
 import styled from "styled-components/native";
 import { TouchableOpacity } from "react-native";
 import { images } from "./images";
@@ -8,7 +8,6 @@ import SoundManager from "./components/SoundManager";
 const Container = styled.SafeAreaView`
   flex: 1;
   margin-left: 20px;
-  /*align-items: center;*/
   justify-content: flex-start;
 `;
 
@@ -128,11 +127,9 @@ const App = () => {
           </SoneInfoContainer>
         </TitlesongContainer>
         <SubTitle>최근 들은 노래</SubTitle>
-        {/* <MainsongsListContainer> */}
         <MainsongsList source={require("../assets/images/main_img.png")} />
-        {/* </MainsongsListContainer> */}
 
-        {/* <IconButton type={images.unlike} /> */}
+
         <ExplanationContainer>
           <ExplanationImg source={require("../assets/images/expla_img.png")} />
           <Explanation>
@@ -146,4 +143,16 @@ const App = () => {
   );
 };
 
-export default App;
+export default App; */
+{
+  /* <IconButton type={images.unlike} /> 하트 */
+}
+
+import React from "react";
+import Navigation from "./navigations";
+
+import StackNav from "./navigations/Stack";
+
+export default function App() {
+  return <Navigation />;
+}
