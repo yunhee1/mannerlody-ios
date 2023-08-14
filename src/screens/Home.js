@@ -1,19 +1,9 @@
 import React, { useEffect } from "react";
-import { Button } from "react-native";
 import styled from "styled-components/native";
-import { TouchableOpacity } from "react-native";
-// import { images } from "../../assets/images";
+import { TouchableOpacity, Button } from "react-native";
+import { images } from "../images";
 import IconButton from "../components/IconButton";
-// import SoundManager from "../components/SoundManager";
-
-// const Container = styled.View`
-//   align-items: center;
-// `;
-
-const StyledText = styled.Text`
-  font-size: 30px;
-  margin-bottom: 10px;
-`;
+import SoundManager from "../components/SoundManager";
 
 const Container = styled.SafeAreaView`
   flex: 1;
@@ -67,6 +57,7 @@ const Type = styled.Text`
   color: #6635fa;
   font-weight: 600;
 `;
+
 const SubTitle = styled.Text`
   font-size: 22px;
   color: #6635fa;
@@ -119,12 +110,44 @@ const Tab = styled.Image`
 `;
 
 const Home = ({ navigation }) => {
+  useEffect(() => {
+    SoundManager.loadSound(require("../../assets/songs/baemin_song.mp3"));
+  }, []);
+
   return (
-    <Container>
-      <StyledText>Home</StyledText>
+    <>
+      <Container>
+        <Title>매너모드로 느끼는 멜로디{"\n"}매너로디입니다</Title>
+        <SubTitle>오늘은 이 음악 어떤가요?</SubTitle>
+        <TitlesongContainer onPress={() => navigation.navigate("SongInfo")}>
+          <TitleImg source={require("../../assets/images/tomato_album.jpg")} />
+          <SoneInfoContainer>
+            <Type>신나는</Type>
+            <SongTitle>멋쟁이 토마토</SongTitle>
+            <SongComposer>김영광 작사 / 김영광 작곡</SongComposer>
+          </SoneInfoContainer>
+        </TitlesongContainer>
+        <SubTitle>최근 들은 노래</SubTitle>
+        <MainsongsList source={require("../../assets/images/main_img.png")} />
+
+        <ExplanationContainer>
+          <ExplanationImg
+            source={require("../../assets/images/expla_img.png")}
+          />
+          <Explanation>
+            음의 높낮이에 따라 음악을 느낄 수 있는 {"\n"}매너로디의 5가지의
+            진동을 체험해보세요
+          </Explanation>
+        </ExplanationContainer>
+      </Container>
+      <Tab source={require("../../assets/images/tab_bar.png")} />
+      {/* <StyledText>Home</StyledText> */}
       <Button title="List" onPress={() => navigation.navigate("List")} />
-    </Container>
+    </>
   );
 };
 
 export default Home;
+{
+  /* <IconButton type={images.unlike} /> 하트 */
+}
