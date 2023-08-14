@@ -21,9 +21,7 @@ const Container = styled.View`
   justify-content: center;
 `;
 
-const MainContainer = styled.SafeAreaView`
-  flex: 1;
-`;
+const MainContainer = styled.SafeAreaView``;
 const StyledText = styled.Text`
   font-size: 30px;
   margin-bottom: 10px;
@@ -33,19 +31,26 @@ const BarImg = styled.Image`
   height: 2px;
 `;
 
+// const VerticalText = styled.Text`
+//   text-align-vertical: true;
+// `;
+
 const SongPlay = () => {
   useEffect(() => {
     SoundManager.loadSound(require("../../assets/songs/baemin_song.mp3"));
   }, []);
+
   return (
     <Container>
       <LinearGradient
         colors={["#9D41FF", "#6635FA"]}
         style={styles.linearGradient}
       >
-        <MainContainer>
-          <BarImg source={require("../../assets/images/line_img.png")} />
-        </MainContainer>
+        {/* <MainContainer> */}
+        <BarImg source={require("../../assets/images/line_img.png")} />
+
+        <Text style={styles.vertical}>멋쟁이 토마토</Text>
+        {/* </MainContainer> */}
       </LinearGradient>
       {/* <StyledText>songPlay</StyledText> */}
     </Container>
@@ -59,6 +64,19 @@ var styles = StyleSheet.create({
   },
   avoid: {
     height: "20px",
+  },
+
+  vertical: {
+    width: "28%",
+    height: "5%",
+    transform: [{ rotate: "90deg" }],
+    marginTop: "70%",
+    marginLeft: "80%",
+    justifyContent: "center",
+    fontSize: 23,
+    color: "white",
+    alignSelf: "center",
+    fontWeight: 600,
   },
 });
 
