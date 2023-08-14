@@ -114,7 +114,7 @@ const SongInfo = ({ navigation }) => {
         <SubTextt>#경쾌한 #신나는</SubTextt>
       </ThisSongContainer>
 
-      <StyledButton>
+      <StyledButton onPress={() => navigation.navigate("SongPlay")}>
         <ButtonText>음악 재생하기</ButtonText>
       </StyledButton>
     </Container>

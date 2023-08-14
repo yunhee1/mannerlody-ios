@@ -3,7 +3,6 @@ import styled from "styled-components/native";
 import { TouchableOpacity, Button } from "react-native";
 import { images } from "../images";
 import IconButton from "../components/IconButton";
-import SoundManager from "../components/SoundManager";
 
 const Container = styled.SafeAreaView`
   flex: 1;
@@ -110,10 +109,6 @@ const Tab = styled.Image`
 `;
 
 const Home = ({ navigation }) => {
-  useEffect(() => {
-    SoundManager.loadSound(require("../../assets/songs/baemin_song.mp3"));
-  }, []);
-
   return (
     <>
       <Container>
@@ -141,8 +136,6 @@ const Home = ({ navigation }) => {
         </ExplanationContainer>
       </Container>
       <Tab source={require("../../assets/images/tab_bar.png")} />
-      {/* <StyledText>Home</StyledText> */}
-      <Button title="List" onPress={() => navigation.navigate("List")} />
     </>
   );
 };

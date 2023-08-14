@@ -2392,7 +2392,7 @@
 
 "@react-native-community/masked-view@^0.1.11":
   version "0.1.11"
-  resolved "https://registry.yarnpkg.com/@react-native-community/masked-view/-/masked-view-0.1.11.tgz#2f4c6e10bee0786abff4604e39a37ded6f3980ce"
+  resolved "https://registry.npmjs.org/@react-native-community/masked-view/-/masked-view-0.1.11.tgz"
   integrity sha512-rQfMIGSR/1r/SyN87+VD8xHHzDYeHaJq6elOSCAD+0iLagXkSI2pfA0LmSXP21uw5i3em7GkkRjfJ8wpqWXZNw==
 
 "@react-native/assets@1.0.0":
@@ -4674,7 +4674,7 @@ expo-asset@~8.9.1:
 
 expo-av@~13.2.1:
   version "13.2.1"
-  resolved "https://registry.yarnpkg.com/expo-av/-/expo-av-13.2.1.tgz#ce502a4c5d4a57962fd9f5f1a40c76c39c88f5ee"
+  resolved "https://registry.npmjs.org/expo-av/-/expo-av-13.2.1.tgz"
   integrity sha512-mC0mYSzaOaZgXjzhW2l4Ag325JjH6q5IbptfwD7gkMOFYy7VPOMxEMUnetadbs3DDzmgE6vUWrTjUIUbwq59qg==
 
 expo-constants@~14.2.0, expo-constants@~14.2.1:
@@ -4703,6 +4703,11 @@ expo-keep-awake@~12.0.1:
   version "12.0.1"
   resolved "https://registry.npmjs.org/expo-keep-awake/-/expo-keep-awake-12.0.1.tgz"
   integrity sha512-hqeCnb4033TyuZaXs93zTK7rjVJ3bywXATyMmKmKkLEsH2PKBAl/VmjlCOPQL/2Ncqz6aj7Wo//tjeJTARBD4g==
+
+expo-linear-gradient@~12.1.2:
+  version "12.1.2"
+  resolved "https://registry.yarnpkg.com/expo-linear-gradient/-/expo-linear-gradient-12.1.2.tgz#25e352b179a73fb7c2de3c1bc48186557e445348"
+  integrity sha512-e1d6Hq5qsRL8sWutrOuQhuir4vHiRJ1PmvDIL8P33mt51Y8VFTQjTG/mr5qJlT8lUD/ADJfaBLzV7SNqSuDTLQ==
 
 expo-modules-autolinking@1.2.0:
   version "1.2.0"
@@ -8030,6 +8035,11 @@ react-native-gradle-plugin@^0.71.18:
   version "0.71.18"
   resolved "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.18.tgz"
   integrity sha512-7F6bD7B8Xsn3JllxcwHhFcsl9aHIig47+3eN4IHFNqfLhZr++3ElDrcqfMzugM+niWbaMi7bJ0kAkAL8eCpdWg==
+
+react-native-linear-gradient@^2.8.2:
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.8.2.tgz#9811c91751be673ef928ef4aa3ff3a70b82935d6"
+  integrity sha512-hgmCsgzd58WNcDCyPtKrvxsaoETjb/jLGxis/dmU3Aqm2u4ICIduj4ECjbil7B7pm9OnuTkmpwXu08XV2mpg8g==
 
 react-native-reanimated@~2.14.4:
   version "2.14.4"

@@ -1,5 +1,5 @@
 import Home from "./Home";
 import SongInfo from "./SongInfo";
-import Chat from "./Chat";
+import SongPlay from "./SongPlay";
 
-export { Home, SongInfo, Chat };
+export { Home, SongInfo, SongPlay };
