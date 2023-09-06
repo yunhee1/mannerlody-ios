@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Button,
   StyleSheet,
@@ -10,7 +10,7 @@ import {
 import styled from "styled-components/native";
 import { LinearGradient } from "expo-linear-gradient";
 import SoundManager from "../components/SoundManager";
-import Video from "react-native-video";
+import { Video } from "expo-av";
 
 const Height = Dimensions.get("window").height;
 const Width = Dimensions.get("window").width;
@@ -37,23 +37,33 @@ const BarImg = styled.Image`
 // `;
 
 const SongPlay = () => {
-  useEffect(() => {
-    SoundManager.loadSound(require("../../assets/songs/baemin_song.mp3"));
-  }, []);
+  // useEffect(() => {
+  //   SoundManager.loadSound(require("../../assets/songs/baemin_song.mp3"));
+  // }, []);
+  const [data, setData] = useState(
+    "https://res.cloudinary.com/detbhtvwc/video/upload/v1693973156/video-appa_dnrobs.mp4"
+  );
+  const videoFile = require("../../assets/video/video-appa.mp4");
 
   return (
     <Container>
-      <LinearGradient
+      <Video
+        source={{ uri: data }}
+        shouldPlay
+        resizeMode="contain"
+        volume={1.0}
+        style={styles.fullScreen}
+        videoStyle={styles.video}
+      ></Video>
+      {/* <LinearGradient
         colors={["#9D41FF", "#6635FA"]}
         style={styles.linearGradient}
       >
-        {/* <MainContainer> */}
         <BarImg source={require("../../assets/images/line_img.png")} />
 
         <Text style={styles.vertical}>멋쟁이 토마토</Text>
-        {/* </MainContainer> */}
       </LinearGradient>
-      {/* <StyledText>songPlay</StyledText> */}
+      <StyledText>songPlay</StyledText> */}
     </Container>
   );
 };
@@ -78,6 +88,17 @@ var styles = StyleSheet.create({
     color: "white",
     alignSelf: "center",
     fontWeight: 600,
+  },
+
+  fullScreen: {
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+  },
+  video: {
+    width: "100%",
+    height: "100%",
+    transform: [{ rotate: "90deg" }],
   },
 });
 
