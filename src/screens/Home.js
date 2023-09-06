@@ -115,11 +115,11 @@ const Home = ({ navigation }) => {
         <Title>매너모드로 느끼는 멜로디{"\n"}매너로디입니다</Title>
         <SubTitle>오늘은 이 음악 어떤가요?</SubTitle>
         <TitlesongContainer onPress={() => navigation.navigate("SongInfo")}>
-          <TitleImg source={require("../../assets/images/tomato_album.jpg")} />
+          <TitleImg source={require("../../assets/images/song_album.jpg")} />
           <SoneInfoContainer>
-            <Type>신나는</Type>
-            <SongTitle>멋쟁이 토마토</SongTitle>
-            <SongComposer>김영광 작사 / 김영광 작곡</SongComposer>
+            <Type>동요</Type>
+            <SongTitle>아빠 힘내세요</SongTitle>
+            <SongComposer>권연순 작사 / 한수성 작곡</SongComposer>
           </SoneInfoContainer>
         </TitlesongContainer>
         <SubTitle>최근 들은 노래</SubTitle>

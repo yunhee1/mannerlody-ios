@@ -95,23 +95,23 @@ const SubTextt = styled.Text`
 const SongInfo = ({ navigation }) => {
   return (
     <Container>
-      <SubTitle>멋쟁이 토마토</SubTitle>
-      <TitleImg source={require("../../assets/images/tomato_album.jpg")} />
+      <SubTitle>아빠 힘내세요</SubTitle>
+      <TitleImg source={require("../../assets/images/song_album.jpg")} />
       <SongWriterContainer>
         <StyledView>
           <Type>작사</Type>
-          <SubText>김영광</SubText>
+          <SubText>권연순</SubText>
         </StyledView>
         <StyledView>
           <Type>작곡</Type>
-          <SubText>김영광</SubText>
+          <SubText>한수성</SubText>
         </StyledView>
       </SongWriterContainer>
 
       <ThisSongContainer>
         <Type>이 노래는</Type>
-        <SubText>되고 싶은 것이 무엇인지 다짐하는 내용의 곡</SubText>
-        <SubTextt>#경쾌한 #신나는</SubTextt>
+        <SubText>일 끝나고 지쳐 들어오신 아빠를 응원하는 곡</SubText>
+        <SubTextt>#신나는 #교과서수록곡</SubTextt>
       </ThisSongContainer>
 
       <StyledButton onPress={() => navigation.navigate("SongPlay")}>
