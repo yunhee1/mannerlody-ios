@@ -6,6 +6,7 @@ import {
   Dimensions,
   Text,
   Image,
+  Vibration,
 } from "react-native";
 import styled from "styled-components/native";
 import { LinearGradient } from "expo-linear-gradient";
@@ -32,19 +33,28 @@ const BarImg = styled.Image`
   height: 2px;
 `;
 
-// const VerticalText = styled.Text`
-//   text-align-vertical: true;
-// `;
-
+const PATTERN = [
+    9000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+];
 const SongPlay = () => {
-  // useEffect(() => {
-  //   SoundManager.loadSound(require("../../assets/songs/baemin_song.mp3"));
-  // }, []);
+   useEffect(() => {
+     Vibration.vibrate(PATTERN, true);
+   }, []);
   const [data, setData] = useState(
     "https://res.cloudinary.com/detbhtvwc/video/upload/v1693973156/video-appa_dnrobs.mp4"
   );
-  const videoFile = require("../../assets/video/video-appa.mp4");
-
   return (
     <Container>
       <Video
@@ -55,15 +65,11 @@ const SongPlay = () => {
         style={styles.fullScreen}
         videoStyle={styles.video}
       ></Video>
-      {/* <LinearGradient
-        colors={["#9D41FF", "#6635FA"]}
-        style={styles.linearGradient}
-      >
-        <BarImg source={require("../../assets/images/line_img.png")} />
-
-        <Text style={styles.vertical}>멋쟁이 토마토</Text>
-      </LinearGradient>
-      <StyledText>songPlay</StyledText> */}
+      <Button
+              title="Stop vibration pattern"
+              onPress={() => Vibration.cancel()}
+              color="#FF0000"
+            />
     </Container>
   );
 };
@@ -91,7 +97,7 @@ var styles = StyleSheet.create({
   },
 
   fullScreen: {
-    width: "100%",
+    width: "218%",
     height: "100%",
     position: "absolute",
   },
