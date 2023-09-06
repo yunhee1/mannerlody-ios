@@ -10,6 +10,7 @@ import {
 import styled from "styled-components/native";
 import { LinearGradient } from "expo-linear-gradient";
 import SoundManager from "../components/SoundManager";
+import Video from "react-native-video";
 
 const Height = Dimensions.get("window").height;
 const Width = Dimensions.get("window").width;
