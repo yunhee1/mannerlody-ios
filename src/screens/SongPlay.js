@@ -1,5 +1,12 @@
-import React, { useEffect, useState, useLayoutEffect } from "react";
-import { Button, StyleSheet, Dimensions, Vibration } from "react-native";
+import React, { useEffect, useState } from "react";
+import {
+  Button,
+  StyleSheet,
+  Dimensions,
+  Vibration,
+  Text,
+  TouchableOpacity,
+} from "react-native";
 import styled from "styled-components/native";
 import { Video } from "expo-av";
 
@@ -13,16 +20,15 @@ const Container = styled.View`
   justify-content: center;
 `;
 
-const MainContainer = styled.View``;
-const StyledText = styled.Text`
-  font-size: 30px;
-  margin-bottom: 10px;
-`;
-const BarImg = styled.Image`
-  margin-top: 125px;
-  height: 2px;
+const Backbtn = styled.TouchableOpacity`
+  margin-bottom: 720px;
+  margin-left: 300px;
 `;
 
+const ButtonText = styled.Text`
+  color: #fff;
+  font-size: 15px;
+`;
 const PATTERN = [
   9700, //딩동댕
   1200, //초인종
@@ -36,7 +42,7 @@ const PATTERN = [
   1500, //서계셨죠
 ];
 
-const SongPlay = () => {
+const SongPlay = ({ navigation, route, navigate }) => {
   useEffect(() => {
     if (
       data ===
@@ -54,19 +60,23 @@ const SongPlay = () => {
       <Video
         source={{ uri: data }}
         shouldPlay
-        resizeMode="cover"
+        resizeMode="contain"
         volume={1.0}
-        style={styles.video}
+        style={styles.fullScreen}
         videoStyle={styles.video}
       ></Video>
-      <Button
-        title="Stop vibration pattern"
+      {/* <TouchableOpacity>
+      </TouchableOpacity> */}
+      <Backbtn
+        // title="Stop vibration pattern"
         onPress={() => {
           Vibration.cancel();
-          setData("0");
+          navigation.navigate("SongInfo"),
+            navigation.reset({ routes: [{ name: "SongInfo" }] });
         }}
-        color="#FF0000"
-      />
+      >
+        <ButtonText>뒤로가기</ButtonText>
+      </Backbtn>
     </Container>
   );
 };
