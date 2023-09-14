@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "mannerlody",
-    "slug": "mannerlody",
-    "version": "1.0.0",
+    "slug": "my-project",
+    "version": "1.6",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
