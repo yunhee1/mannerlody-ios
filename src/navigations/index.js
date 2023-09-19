@@ -1,12 +1,14 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import StackNav from "./Stack";
+import TabNav from "./Tab";
 
 const Navigation = () => {
   return (
     <NavigationContainer>
-      <StackNav />
-      {/* navigation코드는 항상 네비게이션 컨테이너의 자식으로 사용되어야 함 */}
+      <TabNav>
+        <StackNav />
+      </TabNav>
     </NavigationContainer>
   );
 };

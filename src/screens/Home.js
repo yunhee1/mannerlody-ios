@@ -135,7 +135,6 @@ const Home = ({ navigation }) => {
           </Explanation>
         </ExplanationContainer>
       </Container>
-      <Tab source={require("../../assets/images/tab_bar.png")} />
     </>
   );
 };
