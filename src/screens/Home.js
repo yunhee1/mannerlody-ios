@@ -63,9 +63,7 @@ const SubTitle = styled.Text`
   margin-top: 10px;
   font-weight: 600;
 `;
-// const MainsongsListContainer = styled.View`
-//   width: 90%;
-// `;
+
 const MainsongsList = styled.Image`
   width: 93%;
   height: 230px;
