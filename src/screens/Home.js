@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import styled from "styled-components/native";
-import { TouchableOpacity, Button } from "react-native";
+import { View } from "react-native";
 import { images } from "../images";
 import IconButton from "../components/IconButton";
 
 const Container = styled.SafeAreaView`
   flex: 1;
-  margin-left: 20px;
+  padding-left: 20px;
   justify-content: flex-start;
+  background-color: #ffffff;
 `;
 
 const Title = styled.Text`
@@ -110,28 +111,30 @@ const Home = ({ navigation }) => {
   return (
     <>
       <Container>
-        <Title>매너모드로 느끼는 멜로디{"\n"}매너로디입니다</Title>
-        <SubTitle>오늘은 이 음악 어떤가요?</SubTitle>
-        <TitlesongContainer onPress={() => navigation.navigate("SongInfo")}>
-          <TitleImg source={require("../../assets/images/song_album.jpg")} />
-          <SoneInfoContainer>
-            <Type>동요</Type>
-            <SongTitle>아빠 힘내세요</SongTitle>
-            <SongComposer>권연순 작사 / 한수성 작곡</SongComposer>
-          </SoneInfoContainer>
-        </TitlesongContainer>
-        <SubTitle>최근 들은 노래</SubTitle>
-        <MainsongsList source={require("../../assets/images/main_img.png")} />
+        <View style={{ marginLeft: 20 }}>
+          <Title>매너모드로 느끼는 멜로디{"\n"}매너로디입니다</Title>
+          <SubTitle>오늘은 이 음악 어떤가요?</SubTitle>
+          <TitlesongContainer onPress={() => navigation.navigate("SongInfo")}>
+            <TitleImg source={require("../../assets/images/song_album.jpg")} />
+            <SoneInfoContainer>
+              <Type>동요</Type>
+              <SongTitle>아빠 힘내세요</SongTitle>
+              <SongComposer>권연순 작사 / 한수성 작곡</SongComposer>
+            </SoneInfoContainer>
+          </TitlesongContainer>
+          <SubTitle>최근 들은 노래</SubTitle>
+          <MainsongsList source={require("../../assets/images/main_img.png")} />
 
-        <ExplanationContainer>
-          <ExplanationImg
-            source={require("../../assets/images/expla_img.png")}
-          />
-          <Explanation>
-            음의 높낮이에 따라 음악을 느낄 수 있는 {"\n"}매너로디의 5가지의
-            진동을 체험해보세요
-          </Explanation>
-        </ExplanationContainer>
+          <ExplanationContainer>
+            <ExplanationImg
+              source={require("../../assets/images/expla_img.png")}
+            />
+            <Explanation>
+              음의 높낮이에 따라 음악을 느낄 수 있는 {"\n"}매너로디의 5가지의
+              진동을 체험해보세요
+            </Explanation>
+          </ExplanationContainer>
+        </View>
       </Container>
     </>
   );

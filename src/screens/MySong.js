@@ -4,8 +4,7 @@ import { TouchableOpacity, Button } from "react-native";
 
 const Container = styled.SafeAreaView`
   flex: 1;
-  margin-left: 20px;
-  justify-content: flex-start;
+  background-color: #ffffff;
 `;
 
 const Title = styled.Text`
@@ -15,23 +14,17 @@ const Title = styled.Text`
   font-weight: 700;
 `;
 
-const Tab = styled.Image`
-  width: 100%;
-  height: 90px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  object-fit: contain;
-  align-self: flex-end;
+const StyledBackground = styled.ImageBackground`
+  flex: 1;
 `;
 
 const MySong = ({ navigation }) => {
   return (
-    <>
-      <Container>
-        <Title>내 음악 페이지</Title>
-      </Container>
-      <Tab source={require("../../assets/images/tab_bar.png")} />
-    </>
+    <Container>
+      <StyledBackground
+        source={require("../../assets/images/mysong_screen_image.png")}
+      />
+    </Container>
   );
 };
 
