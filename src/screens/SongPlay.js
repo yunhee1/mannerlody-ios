@@ -104,8 +104,7 @@ const SongPlay = ({ navigation, route, navigate }) => {
         // title="Stop vibration pattern"
         onPress={() => {
           Vibration.cancel();
-          navigation.navigate("SongInfo"),
-            navigation.reset({ routes: [{ name: "SongInfo" }] });
+          navigation.navigate("SongInfo");
         }}
       >
         <ButtonText>뒤로가기</ButtonText>
