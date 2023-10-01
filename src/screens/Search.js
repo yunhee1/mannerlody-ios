@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components/native";
-import { Text, TextInput, Dimensions } from "react-native";
+import { Text, TextInput, Image } from "react-native";
 // Dimensions.get("window").width;
 const Container = styled.SafeAreaView`
   flex: 1;
@@ -75,6 +75,16 @@ const HistoryContainer = styled.View`
   margin-left: 10px;
 `;
 
+const InnerContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
+const StyledDeleteContainer = styled.Image`
+  width: 18px;
+  height: 18px;
+  margin-left: 4px;
+`;
 const Search = ({ navigation }) => {
   return (
     <Container>
@@ -87,21 +97,46 @@ const Search = ({ navigation }) => {
       <SubTitle>최근 검색 기록</SubTitle>
       <HistoryContainer>
         <HistoryElement>
-          <HistoryElementText>어머님은혜</HistoryElementText>
+          <InnerContainer>
+            <HistoryElementText>어머님은혜</HistoryElementText>
+            <StyledDeleteContainer
+              source={require("../../assets/images/delete_icon.png")}
+            />
+          </InnerContainer>
         </HistoryElement>
         <HistoryElement>
-          <HistoryElementText>스승의 은혜</HistoryElementText>
+          <InnerContainer>
+            <HistoryElementText>스승의 은혜</HistoryElementText>
+            <StyledDeleteContainer
+              source={require("../../assets/images/delete_icon.png")}
+            />
+          </InnerContainer>
         </HistoryElement>
-        <HistoryElement>
-          <HistoryElementText>해바라기</HistoryElementText>
+        <HistoryElement style={{ width: 110 }}>
+          <InnerContainer>
+            <HistoryElementText>해바라기</HistoryElementText>
+            <StyledDeleteContainer
+              source={require("../../assets/images/delete_icon.png")}
+            />
+          </InnerContainer>
         </HistoryElement>
       </HistoryContainer>
       <HistoryContainer>
-        <HistoryElement>
-          <HistoryElementText>악어떼</HistoryElementText>
+        <HistoryElement style={{ width: 95 }}>
+          <InnerContainer>
+            <HistoryElementText>악어떼</HistoryElementText>
+            <StyledDeleteContainer
+              source={require("../../assets/images/delete_icon.png")}
+            />
+          </InnerContainer>
         </HistoryElement>
-        <HistoryElement>
-          <HistoryElementText>작은 세상</HistoryElementText>
+        <HistoryElement style={{ width: 110 }}>
+          <InnerContainer>
+            <HistoryElementText>작은 세상</HistoryElementText>
+            <StyledDeleteContainer
+              source={require("../../assets/images/delete_icon.png")}
+            />
+          </InnerContainer>
         </HistoryElement>
       </HistoryContainer>
 
