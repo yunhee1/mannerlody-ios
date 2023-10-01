@@ -1,13 +1,13 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Home, Search, MySong, Settings } from "../screens";
+import { Home, Search, MySong, Settings, SongInfo } from "../screens";
 import { Image } from "react-native";
 
 const Tab = createBottomTabNavigator();
 
 const TabNav = () => {
   return (
-    <Tab.Navigator screenOptions={{ headerShown: false }}>
+    <Tab.Navigator initialRouteName="홈" screenOptions={{ headerShown: false }}>
       <Tab.Screen
         name="홈"
         component={Home}
