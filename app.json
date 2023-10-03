@@ -2,7 +2,7 @@
   "expo": {
     "name": "mannerlody",
     "slug": "my-project",
-    "version": "1.6",
+    "version": "1.7",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -16,7 +16,8 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.yunhee1.myproject"
+      "bundleIdentifier": "com.yunhee1.myproject",
+      "buildNumber":"2"
     },
     "android": {
       "adaptiveIcon": {
